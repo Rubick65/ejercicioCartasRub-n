@@ -1,0 +1,4 @@
+.carta-brillante {
+  box-shadow: 0 0 15px 5px gold; /* color y tamaño del brillo */
+  border-radius: 8px;            /* opcional: bordes redondeados */
+}

@@ -1,0 +1,236 @@
+
+@font-face {
+    font-family: "CasinoFont";
+    src: url("./fonts/Voga-Medium.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Casino3DFilledItalic";
+    src: url("./fonts/CasinoFlatShadowRegular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Moon";
+    src: url("./fonts/Moon2.0-Bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Centramos el contenido principal del body y aplicamos un fondo de pantalla estilo mesa de póker */
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(imagenes/fondoMesaPoker2.png);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Capa oscura semitransparente sobre el fondo para dar contraste al contenido */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.122); 
+    z-index: -1;
+}
+
+/* Bloques de parámetros (cartas, puntuaciones, configuraciones) con estilo rojo/dorado y sombra */
+.bloqueParametros{
+    display: block;
+    background-color: #C41E3A;
+    border-radius: 15px;
+    border: 2px solid #D4AF37 ;
+    padding: 15px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 
+        0 6px 15px rgba(0, 0, 0, 0.8),   /* sombra base fuerte */
+        0 0 10px rgba(212, 175, 55, 0.4); /* leve brillo dorado */
+}
+
+/* Contenedor interno de los bloques, organiza elementos en fila centrada */
+.fondo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    font-family: "Casino3DFilledItalic", serif;
+}
+
+/* Estilo de los labels (textos de parámetros) en blanco */
+.label2{
+    margin-left: 10px ;
+    color: #FFFFFF;
+}
+
+.label1{
+    color: #FFFFFF;
+}
+
+/* Estilo común de los inputs pequeños y centrados */
+.input{
+    height: 20px;
+    width: 40px;
+    text-align: center;
+    transition: transform 0.2;
+}
+
+.input:hover{
+    transform: scale(1.1)
+    
+}
+
+/* Estilo del título de la sección de creación de tabla y la puntación */
+h1{
+    font-family: "CasinoFont", serif;
+    margin-bottom: 5px;
+    margin-top: 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+/* Estilos para los campos de puntuación y fallos */
+#puntuacion{
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#fallos{
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Estilo de la tabla de juego que contendrá las cartas */
+#tabla{
+    border: none;
+    width: 60%;
+    height: 60vh;
+    border-collapse: collapse;
+}
+
+/* Ajusta tamaño de imágenes dentro de la tabla */
+table img{
+    width: 80vh;
+    margin-left: 12px; 
+    box-shadow: 10px 10px 10px rgb(9, 9, 9);
+    border-radius: 10px;
+}
+
+/* Estilos de las cartas dentro de las celdas */
+td img{
+    border: none;
+    width: 125px;
+    height: 190px;
+    border-radius: 7px;
+    box-shadow: 10px 10px 10px rgb(9, 9, 9);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Efecto hover en las cartas: zoom y sombra más fuerte */
+td img:hover{
+    transform: scale(1.1);
+    box-shadow: 15px 15px 15px black ;
+    transition: transform 0.2s, box-shadow 0.2s ease-in;
+}
+
+/* Efecto al hacer clic: animación de giro */
+td img:active{
+    transform: rotateY(180deg);
+    transition: transform 0.1s ease;
+}
+
+/* Estilo del botón "Jugar" con colores, bordes dorados y sombras */
+#botonJugar {
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    background-color: #C41E3A;
+    border: 2px solid #D4AF37 ;
+    border-radius: 8px;
+    box-shadow: 
+        0 6px 15px rgba(0, 0, 0, 0.8),   
+        0 0 10px rgba(212, 175, 55, 0.4);
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: larger;
+    font-family: "Moon", serif;
+}
+
+
+/* Estilo del botón "Jugar" con colores, bordes dorados y sombras */
+#contenedorBot{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para el contenedor que contiene al botón de jugar y el selector de dificutlad */
+#contenedorDif{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    width: 170px;
+    height: 40px;
+    color: white;
+    background-color: #C41E3A;
+    border: 2px solid #D4AF37 ;
+    border-radius: 8px;
+    box-shadow: 
+        0 6px 15px rgba(0, 0, 0, 0.8),   
+        0 0 10px rgba(212, 175, 55, 0.4);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Estilo para el texto del títtulo del selector de dificultad*/
+#op{
+    font-size: large;
+    font-family: "Moon", serif;
+    text-align: center;
+}
+
+/* Estilo para el texto de las opciones del selector de dificultad*/
+#opciones{
+    text-align: center;
+}
+/* Efecto hover del botón: se eleva ligeramente */
+#botonJugar:hover{
+    transform: translateY(-3px);
+    transition: transform 0.3s;
+}
+
+/* Efecto active del botón: se encoge */
+#botonJugar:active{
+    transform: scale(0.9);
+    transition: transform 0.2s;
+}
+
+
+
+
+
+
+
+

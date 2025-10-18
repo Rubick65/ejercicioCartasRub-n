@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cartas.css">
+    <link rel="stylesheet" href="./dificultades/dificil.css">
+    <title>Juego de memoria de cartas de poker</title>
+    
+</head>
+<body>
+    
+    <div class="bloqueParametros">
+        <h1>Creación de la tabla</h1>
+        <div class="fondo">
+            <label  for="filasNum" class="label1">Filas: <input type="number" name="fila" class="input" id="filasNum"></label>
+            <label for="columnasNum" class="label2">Columnas: <input type="number" name="Columnas" class="input" id="columnasNum"></label>
+        </div>
+    </div>
+
+   
+    <div class="bloqueParametros" style="margin-bottom: 5px;">
+        <h1>Puntuación</h1> 
+        <div class="fondo">
+            <label for="puntuacion" class="label1">Puntos: <input type="text" name="puntuacion" class="input" id="puntuacion" value="0" readonly></label>
+            <label for="fallos" class="label2">Intentos: <input type="text" name="fallos" class="input" id="fallos" value="0" readonly></label>
+        </div>
+    
+    </div>
+    
+    <div id="contenedorBot">
+        <div id="contenedorDif">
+            <label id="op" for="opciones">Dificultad</label>
+            <select id="opciones" name="opciones">
+                <option value="1">Fácil</option>
+                <option value="2" selected>Normal</option>
+                <option value="3">Díficil</option>
+            </select>        
+        </div>
+        
+        <button class="label1" id="botonJugar" onclick="crearCeldas()">Jugar</button>
+    </div>
+    
+    <table id="miTabla">
+    </table>
+
+    <script src="cartas.js"></script>
+    <script src="./dificultades/dificil.js"></script>
+    <script src="./dificultades/facil.js"></script>
+    <script src="./dificultades/gestorDificultades.js"></script>
+</body>
+</html>

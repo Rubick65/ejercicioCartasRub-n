@@ -1,0 +1,25 @@
+Lista de cambios:
+    - He creado una nueva carpeta que contiene:
+        -gestorDifiultades.js: Un gestor que organiza las diferentes dificultades.
+        -facil.js: Contiene las funciones correspondientes a la dificultad fácil.
+        -dificil.js: Contiene las funciones correspondientes a la dificultad difícil.
+        -dificil.css: Archivo de estilos que define la apariencia cuando se activa el efecto de la dificultad difícil.
+
+    -He implementado un selector de dificultad con tres niveles para elegir:
+        -Fácil: En esta dificultad, cuando se alcanza un cierto número de aciertos consecutivos, se revelan dos cartas aleatorias de todo el tablero.
+        -Normal: Esta dificultad no presenta cambios significativos; se trata del modo de juego estándar.
+        -Difícil: En esta dificultad, si se falla 3 veces seguidas, una de las columnas elegida de manera aleatoria se baraja. 
+        Para indicar este evento al usuario, toda la columna brilla durante un momento.
+
+    -Dependiendo de la dificultad seleccioonada, se ajusta automáticamente la cantidad de intentos disponibles
+    -Ahora no se pueden poner una cantidad de celdas impares dicho de otra manera filas * columnas no puede ser un número impar
+
+    -Ahora si el número seleccionado de filas o columnas no se encuentra dentro del rango permitido se ajustará automáticamente en sus
+    respectivas casillas
+    -También he usado variables de el fichero cartas.js directamente en los ficheros de las dificultades(filas, columnas, tabla y bloqueado)
+    
+    -Por otro lado he usado las variables internas de las dificultades(puntos, intentos) en la clase principal cartas.js para poder reiniciarlas
+    siempre que se pulse el botón jugar
+    -También he arreglado el problema con la carga de los fonts que antes solo se podian ver con live server ahora deberían verse siempre
+
+    

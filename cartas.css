@@ -117,12 +117,16 @@ h1{
 }
 
 /* Estilo de la tabla de juego que contendrá las cartas */
-#tabla{
-    border: none;
-    width: 60%;
-    height: 60vh;
+#miTabla{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:none;
+    width: 30%;
+    height: 35vh;
     border-collapse: collapse;
 }
+
 
 /* Ajusta tamaño de imágenes dentro de la tabla */
 table img{
@@ -132,22 +136,25 @@ table img{
     border-radius: 10px;
 }
 
+
 /* Estilos de las cartas dentro de las celdas */
 td img{
+    aspect-ratio: 5/8;
     border: none;
-    width: 125px;
-    height: 190px;
+    width: 95%;
+    max-width: 100px;
     border-radius: 7px;
     box-shadow: 10px 10px 10px rgb(9, 9, 9);
     margin-left: 5px;
     margin-right: 5px;
+    transition: transform 0.2s, box-shadow 0.2s ease-in;
 }
 
 /* Efecto hover en las cartas: zoom y sombra más fuerte */
 td img:hover{
     transform: scale(1.1);
     box-shadow: 15px 15px 15px black ;
-    transition: transform 0.2s, box-shadow 0.2s ease-in;
+    
 }
 
 /* Efecto al hacer clic: animación de giro */

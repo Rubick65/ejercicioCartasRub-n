@@ -1,4 +1,3 @@
-
 /**
  * Fichero que gestiona todo lo relacionado con la selección de dificultades
  */
@@ -25,7 +24,6 @@ function sacarCantidadIntentos(){
         case 3: // Difícil
              intentos = calcularIntentos(1);
              break
-            
     }
     return intentos
 }

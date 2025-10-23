@@ -35,7 +35,7 @@ var dificultad = parseInt(document.getElementById("opciones").value); // Dificul
 var cantidadPuntosVictoria;// Variable para guardar la cantidad de puntos necesarios para ganar la partida
 
 var primerPulsacion, bloqueado; // Booleanos para indicar si es la primera pulsación y para ver si el click está bloqueado
-    var primeraImagen, segundaImagen; // Variables para guardar las imágenes de los clicks
+var primeraImagen, segundaImagen; // Variables para guardar las imágenes de los clicks
 
 /**
  * Función para crear la tabla según las filas y columnas indicadas por el usuario
@@ -212,14 +212,13 @@ function reiniciarPuntuacionPartida(){
 
 /**
  * Función que revela la carta pulsada
- * @param {object} event imagen pulsada
  */
-function revelarCarta(event){
+function revelarCarta(){
     // En caso de que esté bloqueado el click salimos de la función
     if(bloqueado) return; 
 
     // Guardamos la imagen clickeada
-    var imagen = event.target;
+    var imagen = this;
     
     // En caso de que se pulse dos veces la misma imagen salimos de la función
     if(imagen === primeraImagen) return;

@@ -41,7 +41,7 @@ var primeraCarta = true // Booleano que indica si es la primera carta
 
         // Añadimos la imagen actual a la lista de imagenes reveladas
         listaImagenesReveladas.push(imagenActual)
-        // Cambiamos la la imagen por su versión boca abajo
+        // Cambiamos la  imagen por su versión boca abajo
         cambiarImagen(imagenActual)
 
         // En caso de que no sea la primera carta
